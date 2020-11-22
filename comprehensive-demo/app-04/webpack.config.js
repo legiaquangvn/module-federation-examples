@@ -26,22 +26,47 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /node_modules\/svelte\/.*\.mjs$/,
+        resolve: {
+          fullySpecified: false // load Svelte correctly
+        }
+      },
+      { 
+        test: /.m?js$/, 
+        type: 'javascript/auto', 
+        resolve: { 
+          fullySpecified: false 
+        } 
+      },
+      {
         test: /\.m?js$/,
         type: "javascript/auto",
         resolve: {
           fullySpecified: false,
         },
       },
+      // {
+      //   test: /\.svelte$/,
+      //   use: {
+      //     loader: "svelte-loader",
+      //     options: {
+      //       emitCss: false,
+      //       hotReload: true,
+      //     },
+      //   },
+      // },
       {
-        test: /\.svelte$/,
+        test: /\.(html|svelte)$/,
+        exclude: /node_modules/,
         use: {
-          loader: "svelte-loader",
+          loader: 'svelte-loader',
           options: {
-            emitCss: true,
-            hotReload: true,
+            emitCss: false,
+            preprocess: require('svelte-preprocess')({})
           },
         },
       },
+
       {
         test: /\.css$/,
         use: [
@@ -62,7 +87,7 @@ module.exports = {
       filename: "remoteEntry.js",
       exposes: {
         "./App": "./src/main.js",
-        "./loadApp": "./src/loadApp.js",
+        // "./loadApp": "./src/loadApp.js",
       },
       shared: [],
     }),

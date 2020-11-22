@@ -2,7 +2,7 @@ import React from "react";
 import Page from "../Page";
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import loadApp from "app_04/loadApp";
+// import loadApp from "app_04/ ";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,7 +20,8 @@ const SveltePage = () => {
 
   React.useEffect(() => {
     if (mountEl.current.innerHTML.length === 0) {
-      loadApp("app_04", name);
+      // loadApp("app_04", name);
+      // loadApp("app_04");
     }
   })
 

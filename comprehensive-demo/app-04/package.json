@@ -21,5 +21,9 @@
     "dev": "webpack-dev-server --content-base public",
     "serve": "serve public -p 3004",
     "clean": "rm -rf dist"
-  }
+  },
+  "resolutions": {
+    "@babel/runtime": "^7.12.5"
+  }  
+
 }

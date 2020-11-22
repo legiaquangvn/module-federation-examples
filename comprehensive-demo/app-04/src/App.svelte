@@ -1,12 +1,12 @@
 <script>
-  export let name;
+  // export let name;
 
-  window.addEventListener("change-name", e => {
-    console.log(e);
-    if (typeof e.detail !== "undefined") {
-      name = e.detail.name;
-    }
-  });
+  // window.addEventListener("change-name", e => {
+  //   console.log(e);
+  //   if (typeof e.detail !== "undefined") {
+  //     name = e.detail.name;
+  //   }
+  // });
 </script>
 
 <style>
@@ -15,4 +15,5 @@
   }
 </style>
 
-<h1>Hello From Svelte {name}!</h1>
+<!-- <h1>Hello From Svelte {name}!</h1> -->
+<h1>Hello From Svelte !</h1>
