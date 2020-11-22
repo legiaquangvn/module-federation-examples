@@ -5,6 +5,7 @@
     "ng": "ng",
     "start:shell": "ng serve",
     "start:profile": "ng serve mdmf-profile",
+    "start": "ng serve & ng serve mdmf-profile",
     "build:shared": "ng build mdmf-shared",
     "build:shell": "ng build mdmf-shell --prod",
     "build:profile": "ng build mdmf-profile --prod",
@@ -41,6 +42,9 @@
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
+    "ts-node": "~8.3.0",
+    "typescript": "~4.0.2",
+    "tslint": "~6.1.0",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
@@ -51,9 +55,6 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "ng-packagr": "^11.0.0-next.3",
     "ngx-build-plus": "^10.1.1",
-    "protractor": "~7.0.0",
-    "ts-node": "~8.3.0",
-    "tslint": "~6.1.0",
-    "typescript": "~4.0.2"
+    "protractor": "~7.0.0"
   }
 }

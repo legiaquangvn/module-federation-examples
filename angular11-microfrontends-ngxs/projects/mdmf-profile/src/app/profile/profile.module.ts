@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MdmfSharedModule} from '../../../../mdmf-shared/src/public-api';
+// import {MdmfSharedModule} from '../../../../mdmf-shared/src/public-api';
 
 import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ListUserComponent } from './components/list-user/list-user.component';
+import { MdmfSharedModule } from 'projects/mdmf-shared/src/lib/modules/mdmf-shared.module';
 
 @NgModule({
   declarations: [ProfileComponent, ListUserComponent],

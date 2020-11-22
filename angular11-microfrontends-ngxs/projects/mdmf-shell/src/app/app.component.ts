@@ -8,5 +8,6 @@ import { MicrofrontendService } from './microfrontends/microfrontend.service';
 })
 export class AppComponent {
   title = 'mdmf-shell';
-  constructor(public mfService: MicrofrontendService) {}
+  constructor(public mfService: MicrofrontendService) {
+  }
 }

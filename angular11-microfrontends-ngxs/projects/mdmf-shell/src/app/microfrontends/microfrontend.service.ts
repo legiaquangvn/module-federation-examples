@@ -38,6 +38,17 @@ export class MicrofrontendService {
         routePath: 'profile',
         ngModuleName: 'ProfileModule',
       },
+      {
+        // For Loading
+        remoteEntry: 'http://localhost:4202/remoteEntry.js',
+        remoteName: 'mdmfreact',
+        exposedModule: 'MyWrapperReactModule',
+
+        // For Routing, enabling us to ngFor over the microfrontends and dynamically create links for the routes
+        displayName: 'React',
+        routePath: 'react',
+        ngModuleName: 'MyWrapperReactModule',
+      },      
     ];
   }
 }

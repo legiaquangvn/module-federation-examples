@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProfileRoutingModule } from './shell-routing.module';
+import { ShellRoutingModule } from './shell-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { ListUserComponent } from './components/list-user/list-user.component';
 import { MdmfSharedModule } from 'projects/mdmf-shared/src/lib/modules/mdmf-shared.module';
@@ -12,7 +12,7 @@ import { MdmfSharedModule } from 'projects/mdmf-shared/src/lib/modules/mdmf-shar
   declarations: [HomeComponent, ListUserComponent],
   imports: [
     CommonModule,
-    ProfileRoutingModule,
+    ShellRoutingModule,
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsLoggerPluginModule.forRoot(),
     FormsModule,

@@ -15,6 +15,16 @@ const routes: Routes = [
         exposedModule: "ProfileModule",
       }).then((m) => m.ProfileModule),
   },
+  {
+    path: "react",
+    loadChildren: () =>
+      loadRemoteModule({
+        remoteName: "react",
+        remoteEntry: "http://localhost:4202/remoteEntry.js",
+        exposedModule: "MyWrapperReactModule",
+      }).then((m) => m.MyWrapperReactModule),
+  },
+
 ];
 
 @NgModule({

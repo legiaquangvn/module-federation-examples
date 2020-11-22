@@ -1,0 +1,68 @@
+{
+  "name": "wp5-starter-react-ts",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "start1": "webpack-dev-server --open --mode development",
+    "start": "webpack serve --mode development",
+    "start:live": "webpack-dev-server --open --mode development --liveReload",
+    "check-types": "tsc"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jack Herrington",
+    "email": "jherr@pobox.com"
+  },
+  "resolutions": {
+    "webpack": "5.5.1"
+  },
+  "devDependencies": {
+    "@angular-builders/custom-webpack": "^10.0.1",
+    "@angular-devkit/build-angular": "0.1100.0-rc.2",
+    "@angular/cli": "11.0.0-rc.2",
+    "@angular/compiler-cli": "11.0.0-rc.2",
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/plugin-transform-typescript": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "@babel/preset-typescript": "^7.12.1",
+    "@ngxs/devtools-plugin": "^3.7.0",
+    "@ngxs/logger-plugin": "^3.7.0",
+    "@types/jasmine": "~3.5.0",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^14.14.8",
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9",
+    "babel-loader": "^8.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "css-loader": "^3.5.3",
+    "html-webpack-plugin": "^4.5.0",
+    "style-loader": "1.2.1",
+    "ts-loader": "^8.0.11",
+    "typescript": "~4.0.5",
+    "webpack": "^5.5.1",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@angular/animations": "11.0.0-rc.2",
+    "@angular/common": "11.0.0-rc.2",
+    "@angular/compiler": "^11.0.2",
+    "@angular/core": "11.0.0-rc.2",
+    "@angular/forms": "11.0.0-rc.2",
+    "@angular/platform-browser": "^11.0.2",
+    "@angular/platform-browser-dynamic": "^11.0.2",
+    "@angular/router": "11.0.0-rc.2",
+    "@ngxs/store": "^3.7.0",
+    "bootstrap": "^4.5.3",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "rxjs": "~6.6.0",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.10.2"
+  }
+}
