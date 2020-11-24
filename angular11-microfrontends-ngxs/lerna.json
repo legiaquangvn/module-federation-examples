@@ -1,0 +1,9 @@
+{
+  "packages": [
+    "mdmf-profile",
+    "mdmf-react-ts",
+    "mdmf-shell",
+    "mdmf-shared-libs"
+  ],
+  "version": "0.0.0"
+}

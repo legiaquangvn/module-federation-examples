@@ -1,6 +1,7 @@
 # Microfrontends Angular 11
 
 This project shows an example of using Webpack 5 Module Federation with Angular `11.0.0-rc.2` using shared module and NGXS state management.
+  
 
 - note the use of **yarn**, this is required to override the webpack version for the angular cli
 - the project was developed based on the the example `angular11-microfrontends`
@@ -18,8 +19,20 @@ This project shows an example of using Webpack 5 Module Federation with Angular 
 
 - Install packages: `yarn install`
 - Build the shared library `yarn build:shared`
-- Start the mdmf-shell: `yarn start:shell`
-- Start the Microfrontend: `yarn start:profile`
+- Linking shared library to the projects
+  ```bash
+  cd mdmf-shared-libs
+  yarn link
+  cd mdmf-profile
+  yarn link "mdmf-shared-libs"
+  cd ..
+  cd mdmf-react-ts
+  yarn link "mdmf-shared-libs"
+  cd ..
+  cd mdmf-shell
+  yarn link "mdmf-shared-libs"
+  ```
+- Start the `yarn start`
 - Open the shell http://localhost:4200
 - Click the profile navigation link to load the remote Microfrontend
 
@@ -33,9 +46,13 @@ The package.json contains the following section to override webpack to use versi
 
 ```json
   "resolutions": {
-    "webpack": "5.4.0"
+    "webpack": "5.6.0"
   },
 ```
+
+- to run unit test `yarn test`
+- to run e2e test `yarn e2e`
+- to check linting `yarn lint`
 
 ## Project Structure
 
@@ -89,6 +106,11 @@ plugins: [
 ### Shared library (mdmf-shared)
 
 - the shared library is a typical Angular library created by `ng generate library mdmf-shared`
+```bash
+ng new mdmf-shared-libs --create-application=false
+cd mdmf-shared-libs
+ng generate library mdmf-shared
+```
 
 - it uses state management library `ngxs`
   - the dependencies installation 
@@ -103,3 +125,4 @@ plugins: [
     ```
 
 - it contains the `actions`, application `state` and common `models`
+
