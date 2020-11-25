@@ -2,18 +2,18 @@
   "private": true,
   "scripts": {
     "build": "lerna run build --scope mdmf-shared-libs",
-    "start": "lerna run start --parallel --scope mdmf-shell --scope mdmf-profile --scope mdmf-react-ts",
+    "start": "lerna run start --parallel --scope mdmf-shell --scope mdmf-profile --scope mdmf-react-ts",        
     "test": "lerna run test --scope mdmf-shell --scope mdmf-profile --scope mdmf-shared-libs",
     "lint": "lerna run lint --scope mdmf-shell --scope mdmf-profile --scope mdmf-react-ts --scope mdmf-shared-libs",
-    "e2e": "lerna run e2e --scope mdmf-shell --scope mdmf-profile"
+    "e2e": "lerna run e2e --scope mdmf-shell --scope mdmf-profile",
+    "clean": "lerna run clean --parallel --scope mdmf-shell --scope mdmf-profile --scope mdmf-react-ts --scope mdmf-shared-libs",
+    "remove:this_node_modules": "trash node_modules",
+    "remove:sub_node_modules": "lerna run remove:node_modules --parallel --scope mdmf-shell --scope mdmf-profile --scope mdmf-react-ts --scope mdmf-shared-libs",
+    "remove:all_node_modules": "yarn remove:this_node_modules && yarn remove:sub_node_modules"
   },
 
   "devDependencies": {
-    "lerna": "^3.22.1",
-    "serve": "11.3.2",
-    "webpack": "5.6.0",
-    "webpack-cli": "4.1.0",
-    "webpack-dev-server": "3.11.0"
+    "lerna": "^3.22.1"  
   },
 
   "name": "mf-demo"

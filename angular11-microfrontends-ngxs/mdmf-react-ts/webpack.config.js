@@ -31,10 +31,19 @@ module.exports = {
       {
         test: /\.(ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
-        use: [          
-          {loader: "babel-loader"}
-      ],
+        use: [
+          { loader: "babel-loader" }
+        ],
       },
+      {
+        test: /\.svg$/,
+        use: {
+          loader: 'svg-url-loader',
+          options: {
+            limit: 10000
+          }
+        }
+      }      
     ],
   },
 
@@ -46,17 +55,17 @@ module.exports = {
       remotes: {},
       exposes: {
         MyWrapperReactModule: "./src/components/angular-wrapper/MyWrapperReactModule.tsx",
-      },      
+      },
       shared: {
         "@angular/core": { singleton: true, eager: true },
         "@angular/common": { singleton: true, eager: true },
         "@angular/router": { singleton: true, eager: true },
-        "@ngxs/store": {singleton: true, eager: true },
+        "@ngxs/store": { singleton: true, eager: true },
         "mdmf-shared": { singleton: true, eager: true }
       },
     }),
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-    }),
+      template: "./src/index.html"
+    })
   ],
 };
